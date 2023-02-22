@@ -19,7 +19,7 @@ import asyncio, aiocron, datetime
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, User
 #import pyfiglet
-import zeus.client, zeus.test, zeus.bombs, zeus.helpp, zeus.loading, zeus.emoji, zeus.dump, zeus.sexy, zeus.type, zeus.magicrun, zeus.animation, zeus.animation2, zeus.chatinfo, zeus.mq, zeus.mute, zeus.nq, zeus.fuck, zeus.rev, zeus.tr, zeus.userinfo, zeus.base64, zeus.react, zeus.snow, zeus.ar, zeus.smsbomb, zeus.qrc, zeus.rename, zeus.iptrace, zeus.spam, zeus.alive, zeus.tagall, zeus.afk, zeus.timer, zeus.testplugin
+import zeus.client, zeus.test, zeus.bombs, zeus.helpp, zeus.loading, zeus.emoji, zeus.dump, zeus.sexy, zeus.type, zeus.magicrun, zeus.animation, zeus.animation2, zeus.chatinfo, zeus.mq, zeus.mute, zeus.nq, zeus.fuck, zeus.rev, zeus.tr, zeus.userinfo, zeus.base64, zeus.react, zeus.snow, zeus.ar, zeus.smsbomb, zeus.qrc, zeus.rename, zeus.iptrace, zeus.spam, zeus.alive, zeus.tagall, zeus.afk, zeus.timer
 #
 client = zeus.client.client
 
