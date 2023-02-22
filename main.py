@@ -22,7 +22,7 @@ from telethon.tl.types import ChatBannedRights, User
 import zeus.client, zeus.test, zeus.bombs, zeus.helpp, zeus.loading, zeus.emoji, zeus.dump, zeus.sexy, zeus.type, zeus.magicrun, zeus.animation, zeus.animation2, zeus.chatinfo, zeus.mq, zeus.mute, zeus.nq, zeus.fuck, zeus.rev, zeus.tr, zeus.userinfo, zeus.base64, zeus.react, zeus.snow, zeus.ar, zeus.smsbomb
 #
 client = zeus.client.client
-botClient = zeus.client.botClient
+#botClient = zeus.client.botClient
 #
 with client as friday:
 	friday.add_event_handler(zeus.test.test) 
