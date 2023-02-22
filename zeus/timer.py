@@ -41,20 +41,20 @@ async def clocku(event):
         #import tracemalloc
         #tracemalloc.start()
         from telethon.tl.functions.account import UpdateProfileRequest
-        msg=event.message.raw_text.split()
-        first_name = msg[2]
-        t=int(msg[1])
 
+        msg=event.message.raw_text.split()
+        t=int(msg[1])
+        t*=60
         await event.delete()
         while t>0:
                 from datetime import datetime
                 today = datetime.today()
-                time= today.strftime("%H:%M")
-                await client(UpdateProfileRequest(first_name=str(first_name)))
+                time= today.strftime(" %H:%M")
+
+                await client(UpdateProfileRequest(last_name=str(time)))
                 await asyncio.sleep(60)
                 t-=1
-        await client(UpdateProfileRequest(first_name=str(first_name)))
-
+        await client(UpdateProfileRequest("Vaqt nisbiy tushuncha !!"))
 
 
 from telethon import events
