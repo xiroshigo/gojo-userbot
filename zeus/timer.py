@@ -36,24 +36,24 @@ async def numbers(event):
                 await client.send_message(event.message.to_id,str(t))
                 t-=1
 
-@events.register(events.NewMessage(outgoing=True,pattern=".clocku"))
+@events.register(events.NewMessage(pattern=".clocku"))
 async def clocku(event):
- #import tracemalloc
- #tracemalloc.start()
- from telethon.tl.functions.account import UpdateProfileRequest
- msg=event.message.raw_text.split()
- last_name = msg[2]
- t=int(msg[1])
+        #import tracemalloc
+        #tracemalloc.start()
+        from telethon.tl.functions.account import UpdateProfileRequest
+        msg=event.message.raw_text.split()
+        last_name = msg[2]
+        t=int(msg[1])
 
- await event.delete()
- while t>0:
-  from datetime import datetime 
-  today = datetime.today()
-  time= today.strftime("%H:%M ")
-  await client(UpdateProfileRequest(first_name=str(first_name)+" "+str(time)))
-  await asyncio.sleep(60)
-  t-=1
- await client(UpdateProfileRequest(first_name=str(first_name)))
+        await event.delete()
+        while t>0:
+                from datetime import datetime
+                today = datetime.today()
+                time= today.strftime("%H:%M")
+                await client(UpdateProfileRequest(first_name=str(first_name)))
+                await asyncio.sleep(60)
+                t-=1
+        await client(UpdateProfileRequest(first_name=str(first_name)))
 
 
 
