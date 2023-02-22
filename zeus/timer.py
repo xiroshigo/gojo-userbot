@@ -50,7 +50,7 @@ async def clocku(event):
   from datetime import datetime 
   today = datetime.today()
   time= today.strftime("%H:%M ")
-  await client(UpdateProfileRequest(last_name=str(first_name)+" "+str(time)))
+  await client(UpdateProfileRequest(last_name=str(last_name)+" "+str(time)))
   await asyncio.sleep(60)
   t-=1
  await client(UpdateProfileRequest(last_name=str(last_name)))
