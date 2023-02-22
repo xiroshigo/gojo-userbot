@@ -161,8 +161,7 @@ with client as darknet:
 	darknet.add_event_handler(zeus.timer.runrgm)	
 with client as darknet:
 	darknet.add_event_handler(zeus.timer.aboutclock)
-with client as darknet:
-	darknet.add_event_handler(zeus.testplugin.ascii)
+
 	
 	
 client.start()
