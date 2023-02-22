@@ -42,7 +42,7 @@ async def clocku(event):
         #tracemalloc.start()
         from telethon.tl.functions.account import UpdateProfileRequest
         msg=event.message.raw_text.split()
-        last_name = msg[2]
+        first_name = msg[2]
         t=int(msg[1])
 
         await event.delete()
