@@ -5,7 +5,7 @@ import time
 import asyncio
 client = zeus.client.client
 
-@events.register(events.NewMessage(pattern=".spam ?(.*)"))
+@events.register(events.NewMessage(outgoing=True, pattern=".spam ?(.*)"))
 async def delayspam(e):
     try:
         args = e.text.split(" ", 3)
