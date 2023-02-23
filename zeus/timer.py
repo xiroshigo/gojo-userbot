@@ -6,7 +6,7 @@ import asyncio
 from telethon import TelegramClient, events, sync, functions, types, Button
 import zeus.client
 client = zeus.client.client
-@events.register(events.NewMessage(pattern=".timer"))
+@events.register(events.NewMessage(outgoing=True, pattern=".timer"))
 async def timer(event):
         msg=event.message.raw_text.split()
         t=int(msg[1])
@@ -26,7 +26,7 @@ async def timer(event):
         await event.delete()
 
 
-@events.register(events.NewMessage(pattern=".numbers"))
+@events.register(events.NewMessage(outgoing=True,pattern=".numbers"))
 async def numbers(event):
         msg=event.message.raw_text.split()
         t=int(msg[1])
@@ -36,7 +36,7 @@ async def numbers(event):
                 await client.send_message(event.message.to_id,str(t))
                 t-=1
 
-@events.register(events.NewMessage(pattern=".clocku"))
+@events.register(events.NewMessage(outgoing=True,pattern=".clocku"))
 async def clocku(event):
         #import tracemalloc
         #tracemalloc.start()
@@ -143,7 +143,7 @@ async def runrgm(event):
     except:
         pass
         
-@events.register(events.NewMessage(pattern=".aboutclock"))
+@events.register(events.NewMessage(outgoing=True,pattern=".aboutclock"))
 async def aboutclock(event):
         #import tracemalloc
         #tracemalloc.start()
